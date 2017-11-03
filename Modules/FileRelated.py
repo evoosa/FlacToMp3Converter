@@ -46,7 +46,7 @@ def create_mp3_album(music_dir, artist, album):
 
 def create_mp3_all(music_dir):
     global log
-    log = open("C:\\Users\\evoosa\\Desktop\\log.txt", "w")
+    log = open("C:\\Users\\evoosa\\Desktop\\Projects\\flac_to_mp3\\Modules" , "w")
     artists = os.listdir(music_dir)
     for artist in artists:
         artist_dir = os.path.join(music_dir, artist)
