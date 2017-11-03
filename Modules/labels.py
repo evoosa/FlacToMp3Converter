@@ -1,6 +1,6 @@
 from Modules.imports import *
 
-ps_dir = "C:\\Users\\evoosa\\Desktop\\Projects\\flac_to_mp3\\PowerShell"
+ps_dir = "F:\\Scripts\\Python\\flac_to_mp3\PowerShell"
 
 
 def give_labels(artist, album, songname, song_path):
