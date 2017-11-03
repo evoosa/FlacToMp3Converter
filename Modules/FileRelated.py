@@ -26,11 +26,10 @@ def create_mp3_file(album_dir, flac_file, new_folder_path):
     give_labels(labels[0], labels[1], labels[2], mp3_full_path)
 
 
-def create_mp3_album(music_dir, artist, album):
+def create_mp3_album(log, music_dir, artist, album):
     """
     Creates a MP3 album from the FLAC album, if it has FLAC files in it.
     """
-    global log
     flac_album_dir = os.path.join(music_dir, artist, album)
     if has_flac(flac_album_dir) == True:
         print(artist + "  -  " + album)
@@ -45,8 +44,7 @@ def create_mp3_album(music_dir, artist, album):
 
 
 def create_mp3_all(music_dir):
-    global log
-    log = open("C:\\Users\\evoosa\\Desktop\\Projects\\flac_to_mp3\\Modules" , "w")
+    log = open("F:\\Scripts\\Python\\flac_to_mp3\\log.txt", "w")
     artists = os.listdir(music_dir)
     for artist in artists:
         artist_dir = os.path.join(music_dir, artist)
@@ -55,7 +53,7 @@ def create_mp3_all(music_dir):
             for album in albums:
                 album_dir = os.path.join(artist_dir, album)
                 if os.path.isdir(album_dir):
-                    create_mp3_album(music_dir, artist, album)
+                    create_mp3_album(log, music_dir, artist, album)
     log.close()
 
 
