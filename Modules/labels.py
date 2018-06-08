@@ -1,6 +1,7 @@
 from Modules.imports import *
+from Modules import config
 
-ps_dir = "F:\\Scripts\\Python\\flac_to_mp3\PowerShell"
+ps_dir = "{partition}\\Scripts\\Python\\flac_to_mp3\PowerShell".format(partition=config.PARTITION)
 
 
 def give_labels(artist, album, songname, song_path):

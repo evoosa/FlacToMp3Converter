@@ -1,5 +1,5 @@
 from Modules.imports import *
-
+import Modules.config
 
 def has_flac(album_dir):
     """
@@ -44,7 +44,7 @@ def create_mp3_album(log, music_dir, artist, album):
 
 
 def create_mp3_all(music_dir):
-    log = open("F:\\Scripts\\Python\\flac_to_mp3\\log.txt", "w")
+    log = open("{partition}\\Scripts\\Python\\flac_to_mp3\\log.txt".format(partition=config.PARTITION), "w")
     artists = os.listdir(music_dir)
     for artist in artists:
         artist_dir = os.path.join(music_dir, artist)
